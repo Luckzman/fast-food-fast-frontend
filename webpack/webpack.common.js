@@ -41,7 +41,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg)$/,
-        include: path.join(__dirname, 'static/images'),
+        include: path.join(__dirname, 'assets/images'),
         loader: 'file-loader'
       },
       {

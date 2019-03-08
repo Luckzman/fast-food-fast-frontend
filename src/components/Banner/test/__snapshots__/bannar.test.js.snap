@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<div
+  className="showcase"
+>
+  <div
+    className="dark-overlay"
+  >
+    <div
+      className="showcase-container"
+    >
+      <div
+        className="showcase-ad"
+      >
+        <h1>
+          you order! we deliver!!
+        </h1>
+        <p>
+          We're No.1 food delivery service in Nigeria!
+        </p>
+        <div
+          className="showcase-input"
+        >
+          <input
+            placeholder="Search Food"
+            type="text"
+          />
+          <Link
+            replace={false}
+            to="/catalog"
+          >
+            <button
+              type="button"
+            >
+              Search
+            </button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

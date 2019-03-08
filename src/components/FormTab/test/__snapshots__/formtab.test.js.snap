@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<Tab
+  grid={
+    Object {
+      "paneWidth": 12,
+      "tabWidth": 4,
+    }
+  }
+  menu={
+    Object {
+      "secondary": true,
+    }
+  }
+  panes={
+    Array [
+      Object {
+        "menuItem": "Signup",
+        "render": [Function],
+      },
+      Object {
+        "menuItem": "Login",
+        "render": [Function],
+      },
+    ]
+  }
+  renderActiveOnly={true}
+/>
+`;

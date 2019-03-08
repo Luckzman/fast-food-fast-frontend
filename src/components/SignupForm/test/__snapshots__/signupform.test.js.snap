@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<Form
+  as="form"
+>
+  <FormGroup
+    widths="equal"
+  >
+    <FormInput
+      as={[Function]}
+      control={[Function]}
+      fluid={true}
+      placeholder="First name"
+    />
+    <FormInput
+      as={[Function]}
+      control={[Function]}
+      fluid={true}
+      placeholder="Last name"
+    />
+  </FormGroup>
+  <FormField>
+    <input
+      placeholder="Email"
+    />
+  </FormField>
+  <FormField>
+    <input
+      placeholder="Phone"
+    />
+  </FormField>
+  <FormGroup
+    widths="equal"
+  >
+    <FormInput
+      as={[Function]}
+      control={[Function]}
+      fluid={true}
+      placeholder="Password"
+      type="password"
+    />
+    <FormInput
+      as={[Function]}
+      control={[Function]}
+      fluid={true}
+      placeholder="Repeat Password"
+      type="password"
+    />
+  </FormGroup>
+  <FormField>
+    <Checkbox
+      label="I agree to the Terms and Conditions"
+      type="checkbox"
+    />
+  </FormField>
+  <Button
+    as="button"
+    type="submit"
+  >
+    Submit
+  </Button>
+</Form>
+`;

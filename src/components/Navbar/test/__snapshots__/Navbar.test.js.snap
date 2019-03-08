@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<Segment
+  className="no-border-radius"
+  inverted={true}
+>
+  <Container>
+    <Menu
+      inverted={true}
+      secondary={true}
+    >
+      <MenuItem
+        active={false}
+        name="Home"
+        onClick={[Function]}
+      />
+      <MenuMenu
+        position="right"
+      >
+        <MenuItem
+          active={false}
+          name="catalog"
+          onClick={[Function]}
+        />
+        <MenuItem>
+          <ModalContainer />
+        </MenuItem>
+      </MenuMenu>
+    </Menu>
+  </Container>
+</Segment>
+`;

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<Modal
+  centered={true}
+  closeIcon={true}
+  closeOnDimmerClick={true}
+  closeOnDocumentClick={false}
+  dimmer={true}
+  eventPool="Modal"
+  size="mini"
+  trigger={
+    <Button
+      as="button"
+    >
+      Login
+    </Button>
+  }
+>
+  <ModalContent>
+    <FormTab />
+  </ModalContent>
+</Modal>
+`;
