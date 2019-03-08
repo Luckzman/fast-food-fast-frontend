@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Menu, Segment } from 'semantic-ui-react';
+import { Menu, Segment, Container } from 'semantic-ui-react';
+import FormModal from '../Modal';
 import './navbar.scss';
 
 export default class MenuExampleInvertedSegment extends Component {
@@ -14,21 +15,21 @@ export default class MenuExampleInvertedSegment extends Component {
 
     return (
       <Segment inverted className="no-border-radius">
-        <Menu inverted secondary>
-          <Menu.Item name="Home" active={activeItem === 'Home'} onClick={this.handleItemClick} />
-          <Menu.Menu position="right">
-            <Menu.Item
-              name="catalog"
-              active={activeItem === 'catalog'}
-              onClick={this.handleItemClick}
-            />
-            <Menu.Item
-              name="login"
-              active={activeItem === 'login'}
-              onClick={this.handleItemClick}
-            />
-          </Menu.Menu>
-        </Menu>
+        <Container>
+          <Menu inverted secondary>
+            <Menu.Item name="Home" active={activeItem === 'Home'} onClick={this.handleItemClick} />
+            <Menu.Menu position="right">
+              <Menu.Item
+                name="catalog"
+                active={activeItem === 'catalog'}
+                onClick={this.handleItemClick}
+              />
+              <Menu.Item>
+                <FormModal />
+              </Menu.Item>
+            </Menu.Menu>
+          </Menu>
+        </Container>
       </Segment>
     );
   }

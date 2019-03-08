@@ -1,6 +1,7 @@
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
-import Login from '../pages/Login';
+// import Login from '../pages/Login';
+// import Signup from '../pages/Signup';
 
 export default [
   {
@@ -8,12 +9,6 @@ export default [
     component: Home,
     exact: true,
     path: '/'
-  },
-  {
-    name: 'login',
-    component: Login,
-    exact: true,
-    path: '/auth'
   },
   {
     name: '404',
