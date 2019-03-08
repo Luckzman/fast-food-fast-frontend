@@ -10,7 +10,7 @@ const TopOrder = () => (
       <div className="order-row">
         <div className="order-card">
           <div className="order-img">
-            <img src="./image-3.jpg" alt="" />
+            <img src="https://res.cloudinary.com/dx0nauane/image/upload/v1552050529/image-4.jpg" alt="" />
             <Link to="./html/order-details.html">view details</Link>
           </div>
           <div className="card-content">
@@ -27,7 +27,7 @@ const TopOrder = () => (
         </div>
         <div className="order-card">
           <div className="order-img">
-            <img src="../../../assets/images/image-17.jpg" alt="" />
+            <img src="https://res.cloudinary.com/dx0nauane/image/upload/v1552050505/image-12.jpg" alt="" />
             <a href="./html/order-details.html">view details</a>
           </div>
           <div className="card-content">
@@ -44,7 +44,7 @@ const TopOrder = () => (
         </div>
         <div className="order-card">
           <div className="order-img">
-            <img src="../../../assets/images/image-5.jpg" alt="" />
+            <img src="https://res.cloudinary.com/dx0nauane/image/upload/v1544280158/x5cu9owt6sx4vxhdoz23.jpg" alt="" />
             <a href="./html/order-details.html">view details</a>
           </div>
           <div className="card-content">
