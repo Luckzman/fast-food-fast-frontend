@@ -1,2 +1,0 @@
-const NETWORK_ERROR = 'NETWORK_ERROR';
-export default NETWORK_ERROR;

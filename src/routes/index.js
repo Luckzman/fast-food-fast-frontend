@@ -1,6 +1,6 @@
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
-// import Login from '../pages/Login';
+import Catalog from '../pages/Catalog';
 // import Signup from '../pages/Signup';
 
 export default [
@@ -9,6 +9,12 @@ export default [
     component: Home,
     exact: true,
     path: '/'
+  },
+  {
+    name: 'catalog',
+    component: Catalog,
+    exact: true,
+    path: '/catalog'
   },
   {
     name: '404',

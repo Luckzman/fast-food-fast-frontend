@@ -1,31 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App should match snapshot 1`] = `
-<Form
-  as="form"
->
-  <FormField>
-    <input
-      placeholder="Email"
-    />
-  </FormField>
-  <FormField>
-    <input
-      placeholder="Password"
-      type="password"
-    />
-  </FormField>
-  <FormField>
-    <Checkbox
-      label="I agree to the Terms and Conditions"
-      type="checkbox"
-    />
-  </FormField>
-  <Button
-    as="button"
-    type="submit"
-  >
-    Submit
-  </Button>
-</Form>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
