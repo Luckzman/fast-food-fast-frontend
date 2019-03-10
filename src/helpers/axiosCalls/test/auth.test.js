@@ -3,7 +3,7 @@ import moxios from 'moxios';
 
 import * as auth from '../auth';
 
-describe('get user', async () => {
+describe('get user', () => {
   beforeEach(() => {
     moxios.install();
   });
