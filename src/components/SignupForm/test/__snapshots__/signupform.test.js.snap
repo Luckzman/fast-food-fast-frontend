@@ -3,6 +3,7 @@
 exports[`App should match snapshot 1`] = `
 <Form
   as="form"
+  onSubmit={[Function]}
 >
   <FormGroup
     widths="equal"

@@ -16,7 +16,7 @@ export default (state = user, action) => {
       return {
         authIsLoading: false,
         success: true,
-        response: action.payload,
+        response: action.payload.data.message,
         isAuthenticated: false
       };
     case SIGNUP_FAILURE:
@@ -30,14 +30,14 @@ export default (state = user, action) => {
       return {
         authIsLoading: false,
         success: true,
-        response: action.payload,
+        response: action.payload.data,
         isAuthenticated: true
       };
     case LOGIN_FAILURE:
       return {
         authIsLoading: false,
         success: false,
-        response: action.payload,
+        response: action.payload.data.message,
         isAuthenticated: false
       };
     default:

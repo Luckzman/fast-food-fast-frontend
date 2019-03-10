@@ -121,7 +121,7 @@ Object {
       email: "email@email.com",
       password: "passwordAS12",
       location: "fake_location",
-      phone: "adfjvv"
+      phone: "j&*^%%%sas"
     };
     const checkUser = signupValidator(user);
     expect(checkUser.phone).toEqual("phone number is not valid");

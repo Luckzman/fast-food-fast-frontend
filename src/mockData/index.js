@@ -24,11 +24,13 @@ const fakeUser2 = {
   password: 'password'
 };
 const signupOkResponse = {
-  status: 201,
-  success: true,
   data: {
-    message:
-      'Account successfully created, Kindly check your email to activate your account. In case you did not receive the activation link in your mail, kindly visit this link localhost:3000/api/v1/users/resend/activation/mail to resend the mail.'
+    status: 201,
+    success: true,
+    data: {
+      message:
+        'Account successfully created, Kindly check your email to activate your account. In case you did not receive the activation link in your mail, kindly visit this link localhost:3000/api/v1/users/resend/activation/mail to resend the mail.'
+    }
   }
 };
 const mockResponse = {
@@ -51,11 +53,13 @@ const error = {
   }
 };
 const loginOkResponse = {
-  status: 200,
-  success: true,
   data: {
-    token: 'sampleToken',
-    message: 'You have sccessfully login'
+    status: 200,
+    success: true,
+    data: {
+      token: 'sampleToken',
+      message: 'You have sccessfully login'
+    }
   }
 };
 const loginBadResponse = {

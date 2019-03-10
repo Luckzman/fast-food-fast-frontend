@@ -20,7 +20,7 @@ export const userSignUp = user => async (dispatch) => {
   try {
     dispatch(triggerLoading(AUTH_LOADING));
     const response = await signupCall(user);
-    dispatch(signUpSuccess(response.data));
+    dispatch(signUpSuccess(response));
     toast.success(response.data.data.message);
   } catch (error) {
     if (error.response) {
@@ -45,11 +45,11 @@ export const userLogin = user => async (dispatch) => {
     dispatch(triggerLoading(AUTH_LOADING));
     const response = await loginCall(user);
     setToken(response.data.data.token);
-    dispatch(loginSuccess(response.data));
+    dispatch(loginSuccess(response));
     toast.success(response.data.data.message);
   } catch (error) {
     if (error.response) {
-      dispatch(loginFailure(error.response.data));
+      dispatch(loginFailure(error.response));
       toast.error(error.response.data.data.message);
     }
   }

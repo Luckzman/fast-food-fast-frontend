@@ -47,7 +47,7 @@ class SignupForm extends Component {
       return <Redirect to="catalog" />;
     }
     return (
-      <Form>
+      <Form onSubmit={this.handleSubmit}>
         <Form.Group widths="equal">
           <Form.Input
             fluid
