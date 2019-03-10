@@ -1,10 +1,10 @@
 const initialState = {
-  auth: {
+  user: {
     authIsLoading: false,
     success: false,
-    response: '',
+    response: {},
     isAuthenticated: null
-  },
+  }
 };
 
 export default initialState;

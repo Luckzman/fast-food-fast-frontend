@@ -3,26 +3,28 @@
 exports[`App should match snapshot 1`] = `
 <Form
   as="form"
+  onSubmit={[Function]}
 >
   <FormField>
     <input
+      id="email"
+      name="email"
+      onChange={[Function]}
       placeholder="Email"
+      value=""
     />
   </FormField>
   <FormField>
     <input
+      name="password"
+      onChange={[Function]}
       placeholder="Password"
       type="password"
     />
   </FormField>
-  <FormField>
-    <Checkbox
-      label="I agree to the Terms and Conditions"
-      type="checkbox"
-    />
-  </FormField>
   <Button
     as="button"
+    onClick={[Function]}
     type="submit"
   >
     Submit
