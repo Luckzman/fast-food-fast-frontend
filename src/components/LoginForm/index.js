@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import { Button, Form } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { userLogin } from '../../actions/authActions/authActions';
 import Loading from '../Loader/Loading';
+import { loginValidator } from '../../helpers/validate';
+import InlineError from '../../helpers/inlineErrors';
 
 class LoginForm extends Component {
   constructor(props) {
@@ -14,8 +15,8 @@ class LoginForm extends Component {
       user: {
         email: '',
         password: ''
-      }
-      // errors: {}
+      },
+      errors: {}
     };
   }
 
@@ -23,10 +24,10 @@ class LoginForm extends Component {
     event.preventDefault();
     const { user } = this.state;
     const { login } = this.props;
-    // if (errors) {
-    //   this.setState({ errors });
-    // }
-    console.log(user);
+    const errors = loginValidator(user);
+    if (errors) {
+      this.setState({ errors });
+    }
     login(user);
   };
 
@@ -34,19 +35,25 @@ class LoginForm extends Component {
     const { user } = this.state;
     const { name, value } = event.target;
     user[name] = value;
-    console.log(user);
     this.setState({ user });
   };
 
   render() {
-    const { user } = this.state;
-    if (this.props.user.success) {
+    const { user, errors } = this.state;
+    if (this.props.user.isAuthenticated) {
       return <Redirect to="catalog" />;
     }
     return (
       <Form onSubmit={this.handleSubmit}>
         <Form.Field>
-          <input name="email" value={user.email} placeholder="Email" onChange={this.handleChange} />
+          <input
+            id="email"
+            name="email"
+            value={user.email}
+            placeholder="Email"
+            onChange={this.handleChange}
+          />
+          {errors.email && <InlineError text={errors.email} />}
         </Form.Field>
         <Form.Field>
           <input
@@ -56,6 +63,7 @@ class LoginForm extends Component {
             placeholder="Password"
             onChange={this.handleChange}
           />
+          {errors.password && <InlineError text={errors.password} />}
         </Form.Field>
         {this.props.user.authIsLoading ? <Loading size="tiny" /> : null}
         <Button type="submit" onClick={this.handleSubmit}>
