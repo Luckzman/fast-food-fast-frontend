@@ -3,6 +3,7 @@
 exports[`App should match snapshot 1`] = `
 <Form
   as="form"
+  onSubmit={[Function]}
 >
   <FormGroup
     widths="equal"
@@ -11,51 +12,51 @@ exports[`App should match snapshot 1`] = `
       as={[Function]}
       control={[Function]}
       fluid={true}
+      name="firstname"
+      onChange={[Function]}
       placeholder="First name"
+      value=""
     />
     <FormInput
       as={[Function]}
       control={[Function]}
       fluid={true}
+      name="lastname"
+      onChange={[Function]}
       placeholder="Last name"
+      value=""
     />
   </FormGroup>
   <FormField>
     <input
+      id="email"
+      name="email"
+      onChange={[Function]}
       placeholder="Email"
+      value=""
     />
   </FormField>
   <FormField>
     <input
+      name="phone"
+      onChange={[Function]}
       placeholder="Phone"
     />
   </FormField>
-  <FormGroup
-    widths="equal"
-  >
+  <FormField>
     <FormInput
       as={[Function]}
       control={[Function]}
       fluid={true}
+      name="password"
+      onChange={[Function]}
       placeholder="Password"
       type="password"
-    />
-    <FormInput
-      as={[Function]}
-      control={[Function]}
-      fluid={true}
-      placeholder="Repeat Password"
-      type="password"
-    />
-  </FormGroup>
-  <FormField>
-    <Checkbox
-      label="I agree to the Terms and Conditions"
-      type="checkbox"
     />
   </FormField>
   <Button
     as="button"
+    onClick={[Function]}
     type="submit"
   >
     Submit

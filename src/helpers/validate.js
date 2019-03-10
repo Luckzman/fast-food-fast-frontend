@@ -16,13 +16,18 @@ export function loginValidator(user) {
   return errors;
 }
 
-export function signupValidate(user) {
+export function signupValidator(user) {
   const errors = {};
   if (validator.isEmpty(user.firstname)) {
     errors.firstname = 'Firstname field is required';
   }
   if (validator.isEmpty(user.lastname)) {
     errors.lastname = 'Lastname field is required';
+  }
+  if (validator.isEmpty(user.phone)) {
+    errors.phone = 'phone field is required';
+  } else if (!validator.isMobilePhone(user.phone)) {
+    errors.phone = 'phone number is not valid';
   }
   if (validator.isEmpty(user.email)) {
     errors.email = 'Email field is required';
