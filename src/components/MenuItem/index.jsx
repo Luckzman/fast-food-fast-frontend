@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { placeOrder } from '../../actions/orderActions';
 
-export default class MenuItem extends Component {
+class MenuItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,15 +22,18 @@ export default class MenuItem extends Component {
     const { menus } = this.state;
     const { name, value } = event.target;
     menus[name] = value;
-    console.log(menus);
     this.setState({ menus });
   };
 
   addToCart = (menuItem) => {
+    const cart = [];
     const newCart = {};
     const { menus } = this.state;
+    const { placeNewOrder } = this.props;
     newCart.quantity = menus.quantity;
     newCart.menu = menuItem;
+    cart.push(newCart);
+    placeNewOrder(cart);
   };
 
   render() {
@@ -57,8 +62,24 @@ export default class MenuItem extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  order: state.orderReducer
+});
+
+const mapDispatchToProps = dispatch => ({
+  placeNewOrder: dispatch(placeOrder())
+});
+
+export { MenuItem as Menu };
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MenuItem);
+
 MenuItem.propTypes = {
+  placeNewOrder: PropTypes.object,
   menuItem: PropTypes.object
 };
 
-MenuItem.defaultProps = { menuItem: {} };
+MenuItem.defaultProps = { placeNewOrder: {}, menuItem: {} };

@@ -9,6 +9,11 @@ const initialState = {
     menuIsLoading: false,
     success: false,
     response: {}
+  },
+  order: {
+    orderIsLoading: false,
+    success: false,
+    response: {}
   }
 };
 
