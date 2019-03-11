@@ -19,6 +19,7 @@ exports[`App should match snapshot 1`] = `
         position="right"
       >
         <Link
+          className="catalog-link"
           replace={false}
           to="/catalog"
         >
