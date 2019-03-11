@@ -1,6 +1,6 @@
 # fast-food-fast-frontend
 
-[![Build Status](https://travis-ci.org/Luckzman/fast-food-fast-frontend.svg?branch=develop)](https://travis-ci.org/Luckzman/fast-food-fast-frontend)
+[![Build Status](https://travis-ci.com/Luckzman/fast-food-fast-frontend.svg?branch=develop)](https://travis-ci.com/Luckzman/fast-food-fast-frontend)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ae61c341a3d38b45d294/test_coverage)](https://codeclimate.com/github/Luckzman/fast-food-fast-frontend/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/ae61c341a3d38b45d294/maintainability)](https://codeclimate.com/github/Luckzman/fast-food-fast-frontend/maintainability)
 
