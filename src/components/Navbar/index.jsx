@@ -19,7 +19,9 @@ export default class MenuExampleInvertedSegment extends Component {
           <Menu inverted secondary>
             <Menu.Item name="Home" active={activeItem === 'Home'} onClick={this.handleItemClick} />
             <Menu.Menu position="right">
-              <Link to="/catalog">Catalog</Link>
+              <Link className="catalog-link" to="/catalog">
+                Catalog
+              </Link>
               <Menu.Item>
                 <FormModal />
               </Menu.Item>

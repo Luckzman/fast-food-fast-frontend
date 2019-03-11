@@ -28,7 +28,7 @@ exports[`App should match snapshot 1`] = `
           />
           <Link
             replace={false}
-            to="./html/order-details.html"
+            to=""
           >
             view details
           </Link>
@@ -73,11 +73,12 @@ exports[`App should match snapshot 1`] = `
             alt=""
             src="https://res.cloudinary.com/dx0nauane/image/upload/v1552050505/image-12.jpg"
           />
-          <a
-            href="./html/order-details.html"
+          <Link
+            replace={false}
+            to=""
           >
             view details
-          </a>
+          </Link>
         </div>
         <div
           className="card-content"
@@ -119,11 +120,12 @@ exports[`App should match snapshot 1`] = `
             alt=""
             src="https://res.cloudinary.com/dx0nauane/image/upload/v1544280158/x5cu9owt6sx4vxhdoz23.jpg"
           />
-          <a
-            href="./html/order-details.html"
+          <Link
+            replace={false}
+            to=""
           >
             view details
-          </a>
+          </Link>
         </div>
         <div
           className="card-content"
