@@ -6,7 +6,7 @@ import TopOrder from '../../components/TopOrder';
 function Home() {
   return (
     <div className="home">
-      <Navbar />
+      <Navbar category="Category" />
       <Banner />
       <TopOrder />
     </div>

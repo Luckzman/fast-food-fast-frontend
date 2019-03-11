@@ -4,6 +4,11 @@ const initialState = {
     success: false,
     response: {},
     isAuthenticated: null
+  },
+  menu: {
+    menuIsLoading: false,
+    success: false,
+    response: {}
   }
 };
 
