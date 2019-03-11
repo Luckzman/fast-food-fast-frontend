@@ -10,8 +10,11 @@ const TopOrder = () => (
       <div className="order-row">
         <div className="order-card">
           <div className="order-img">
-            <img src="https://res.cloudinary.com/dx0nauane/image/upload/v1552050529/image-4.jpg" alt="" />
-            <Link to="./html/order-details.html">view details</Link>
+            <img
+              src="https://res.cloudinary.com/dx0nauane/image/upload/v1552050529/image-4.jpg"
+              alt=""
+            />
+            <Link to="">view details</Link>
           </div>
           <div className="card-content">
             <h3>meat</h3>
@@ -27,8 +30,11 @@ const TopOrder = () => (
         </div>
         <div className="order-card">
           <div className="order-img">
-            <img src="https://res.cloudinary.com/dx0nauane/image/upload/v1552050505/image-12.jpg" alt="" />
-            <a href="./html/order-details.html">view details</a>
+            <img
+              src="https://res.cloudinary.com/dx0nauane/image/upload/v1552050505/image-12.jpg"
+              alt=""
+            />
+            <Link to="">view details</Link>
           </div>
           <div className="card-content">
             <h3>plantain sauce</h3>
@@ -44,8 +50,11 @@ const TopOrder = () => (
         </div>
         <div className="order-card">
           <div className="order-img">
-            <img src="https://res.cloudinary.com/dx0nauane/image/upload/v1544280158/x5cu9owt6sx4vxhdoz23.jpg" alt="" />
-            <a href="./html/order-details.html">view details</a>
+            <img
+              src="https://res.cloudinary.com/dx0nauane/image/upload/v1544280158/x5cu9owt6sx4vxhdoz23.jpg"
+              alt=""
+            />
+            <Link to="">view details</Link>
           </div>
           <div className="card-content">
             <h3>meat</h3>
