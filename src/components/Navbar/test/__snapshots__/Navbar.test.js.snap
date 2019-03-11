@@ -18,11 +18,12 @@ exports[`App should match snapshot 1`] = `
       <MenuMenu
         position="right"
       >
-        <MenuItem
-          active={false}
-          name="catalog"
-          onClick={[Function]}
-        />
+        <Link
+          replace={false}
+          to="/catalog"
+        >
+          Catalog
+        </Link>
         <MenuItem>
           <ModalContainer />
         </MenuItem>
