@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<div
+  className="order-card"
+>
+  <div
+    className="order-img"
+  >
+    <img
+      alt=""
+    />
+    <Link
+      replace={false}
+    >
+      view details
+    </Link>
+  </div>
+  <div
+    className="card-content"
+  >
+    <h3 />
+    <div
+      className="star-rating"
+    >
+      <span
+        className="fa fa-star checked"
+      />
+      <span
+        className="fa fa-star checked"
+      />
+      <span
+        className="fa fa-star checked"
+      />
+      <span
+        className="fa fa-star checked"
+      />
+      <span
+        className="fa fa-star checked"
+      />
+    </div>
+    <p />
+  </div>
+</div>
+`;
