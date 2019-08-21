@@ -2,17 +2,17 @@ const howToOrderSteps = [
   {
     id: 1,
     step: 'Make your order',
-    image: '../../assets/image/make_order.jpeg',
+    image: 'https://res.cloudinary.com/dx0nauane/image/upload/v1566400108/make_order.jpg',
   },
   {
     id: 2,
     step: 'Choose your location',
-    image: '../../assets/image/location.png',
+    image: 'https://res.cloudinary.com/dx0nauane/image/upload/v1566400107/location.png',
   },
   {
     id: 3,
     step: 'Food is on the way',
-    image: '../../assets/image/food-truck-de-hamburgueres_2.png',
+    image: 'https://res.cloudinary.com/dx0nauane/image/upload/v1566400108/food-truck-de-hamburgueres_2.png',
   }
 ];
 

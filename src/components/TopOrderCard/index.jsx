@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import './TopOrderCard.scss';
+// import './TopOrderCard.scss';
 
 export default function TopOrderCard({ img, pathId, title, description }) {
   return (
