@@ -1,35 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App should match snapshot 1`] = `
-<Segment
-  className="no-border-radius"
-  inverted={true}
+<div
+  className="navbar"
 >
-  <Container>
-    <Menu
-      inverted={true}
-      secondary={true}
+  <div
+    className="container"
+  >
+    <div
+      className="nav"
     >
-      <MenuItem
-        active={false}
-        name="Home"
-        onClick={[Function]}
-      />
-      <MenuMenu
-        position="right"
+      <div
+        className="brand-name"
       >
         <Link
-          className="catalog-link"
           replace={false}
-          to="/catalog"
         >
-          Catalog
+          FastFoodFast.com
         </Link>
-        <MenuItem>
-          <ModalContainer />
-        </MenuItem>
-      </MenuMenu>
-    </Menu>
-  </Container>
-</Segment>
+      </div>
+      <div
+        className="navlinks"
+      />
+    </div>
+  </div>
+</div>
 `;

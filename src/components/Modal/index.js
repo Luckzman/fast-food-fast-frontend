@@ -1,13 +1,23 @@
 import React from 'react';
-import { Button, Modal } from 'semantic-ui-react';
-import FormTab from '../FormTab';
+import PropTypes from 'prop-types';
+import './modal.scss';
 
-const ModalContainer = () => (
-  <Modal trigger={<Button>Login</Button>} closeIcon size="mini">
-    <Modal.Content>
-      <FormTab />
-    </Modal.Content>
-  </Modal>
-);
+function Modal({ content, onCloseModal }) {
+  return (
+    <div className="overlay">
+      <div className="modal">
+        <button type="button" className="close" onClick={onCloseModal}>&times;</button>
+        <div className="modalContent">
+          {content}
+        </div>
+      </div>
+    </div>
+  );
+}
 
-export default ModalContainer;
+Modal.propTypes = {
+  content: PropTypes.element.isRequired,
+  onCloseModal: PropTypes.func.isRequired,
+};
+
+export default Modal;

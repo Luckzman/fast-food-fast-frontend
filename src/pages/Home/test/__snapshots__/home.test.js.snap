@@ -4,10 +4,40 @@ exports[`App should match snapshot 1`] = `
 <div
   className="home"
 >
-  <MenuExampleInvertedSegment
-    category="Category"
-  />
+  <Navbar
+    path="/"
+  >
+    <li
+      className="link"
+    >
+      <a
+        href="#order"
+      >
+        how to order
+      </a>
+    </li>
+    <li
+      className="link"
+    >
+      <Link
+        replace={false}
+        to=""
+      >
+        Catalog
+      </Link>
+    </li>
+    <li
+      className="link--btn"
+    >
+      <Button
+        className="button"
+        handleClick={[Function]}
+        name="LOGIN"
+      />
+    </li>
+  </Navbar>
   <Banner />
-  <TopOrder />
+  <TopOrderContainer />
+  <HowToOrderContainer />
 </div>
 `;

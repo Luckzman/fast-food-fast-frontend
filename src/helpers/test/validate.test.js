@@ -45,10 +45,10 @@ describe("Check signUp validation", () => {
     expect(data).toMatchInlineSnapshot(
       "Object {}",
       `
-Object {
-  "phone": "phone number is not valid",
-}
-`
+      Object {
+        "phone": "phone number is not valid",
+      }
+    `
     );
   });
 

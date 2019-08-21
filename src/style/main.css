@@ -1,6 +1,4 @@
-body {
-  font-family: "M PLUS Rounded 1c", sans-serif;
-}
+
 
 /* HEADER SECTION */
 header {
@@ -47,7 +45,7 @@ header nav a {
 
 /* SHOWCASE SECTION */
 .showcase {
-  height: 70vh;
+  height: 90vh;
   background-image: url("../../assets/images/image-12.jpg");
   background-position: center;
   background-size: cover;
@@ -55,7 +53,7 @@ header nav a {
 }
 .showcase .dark-overlay {
   background-color: rgba(0, 0, 0, 0.6);
-  height: 70vh;
+  height: 90vh;
   width: 100%;
 }
 .showcase .showcase-container {
