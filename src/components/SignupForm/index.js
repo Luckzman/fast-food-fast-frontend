@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Button, Form } from 'semantic-ui-react';
 import { signupValidator } from '../../helpers/validate';
 import { userSignUp } from '../../actions/authActions/authActions';
 import Loading from '../Loader/Loading';
 import InlineError from '../../helpers/inlineErrors';
+import Button from '../Button';
+import Input from '../Input';
+
+import './SignupForm.scss';
+
 
 class SignupForm extends Component {
   constructor(props) {
@@ -43,59 +47,83 @@ class SignupForm extends Component {
 
   render() {
     const { user, errors } = this.state;
-    if (this.props.user.isAuthenticated) {
-      return <Redirect to="catalog" />;
-    }
+    // if (this.props.user.isAuthenticated) {
+    //   return <Redirect to="catalog" />;
+    // }
+    // console.log(<Input />)
     return (
-      <Form onSubmit={this.handleSubmit}>
-        <Form.Group widths="equal">
-          <Form.Input
-            fluid
+      <form className="signup-form" onSubmit={this.handleSubmit}>
+        <div className="form-input">
+          <Input
             name="firstname"
             value={user.firstname}
-            onChange={this.handleChange}
+            handleChange={this.handleChange}
             placeholder="First name"
+            className="name-input"
           />
-          <Form.Input
-            fluid
+          <Input
             name="lastname"
             value={user.lastname}
-            onChange={this.handleChange}
+            handleChange={this.handleChange}
             placeholder="Last name"
+            className="name-input"
           />
-        </Form.Group>
-        {errors.firstname && <InlineError text={errors.firstname} />}
-        {errors.lastname && <InlineError text={errors.lastname} />}
-        <Form.Field>
-          <input
-            id="email"
+        </div>
+        {/* {errors.firstname && <InlineError text={errors.firstname} />}
+        {errors.lastname && <InlineError text={errors.lastname} />} */}
+        <Input
+          name="email"
+          value={user.email}
+          handleChange={this.handleChange}
+          placeholder="Email"
+          className="email-input"
+        />
+        <Input
+          name="phone"
+          value={user.phone}
+          type="text"
+          handleChange={this.handleChange}
+          placeholder="Phone"
+          className="email-input"
+        />
+        <div className="form-input password-input">
+          <Input
+            name="password"
+            value={user.password}
+            type="password"
+            handleChange={this.handleChange}
+            placeholder="Password"
+            className="name-input"
+          />
+          <Input
+            name="password2"
+            value={user.password2}
+            type="password"
+            handleChange={this.handleChange}
+            placeholder="Repeat password"
+            className="name-input"
+          />
+        </div>
+        {/* <input
             name="email"
             value={user.email}
             onChange={this.handleChange}
             placeholder="Email"
-          />
-          {errors.email && <InlineError text={errors.email} />}
-        </Form.Field>
-        <Form.Field>
-          <input name="phone" value={this.phone} onChange={this.handleChange} placeholder="Phone" />
-          {errors.phone && <InlineError text={errors.phone} />}
-        </Form.Field>
-        <Form.Field>
-          <Form.Input
+          /> */}
+        {/* {errors.email && <InlineError text={errors.email} />} */}
+        {/* <input name="phone" value={this.phone} onChange={this.handleChange} placeholder="Phone" /> */}
+        {/* {errors.phone && <InlineError text={errors.phone} />} */}
+        {/* <Input
             name="password"
             value={this.password}
             type="password"
             onChange={this.handleChange}
-            fluid
             placeholder="Password"
-          />
-          {errors.password && <InlineError text={errors.password} />}
-        </Form.Field>
-        {this.props.user.authIsLoading ? <Loading size="tiny" /> : null}
-        <Button type="submit" onClick={this.handleSubmit}>
-          Submit
-        </Button>
-      </Form>
+          /> */}
+        {/* {errors.password && <InlineError text={errors.password} />}
+        {this.props.user.authIsLoading ? <Loading size="tiny" /> : null} */}
+        <Button type="submit" name="Sign up" className="signup-btn" onClick={this.handleSubmit} />
+      </form>
     );
   }
 }
@@ -113,9 +141,9 @@ export default connect(
   mapDispatchToProps
 )(SignupForm);
 
-SignupForm.propTypes = {
-  signup: PropTypes.func,
-  user: PropTypes.object
-};
+// SignupForm.propTypes = {
+//   signup: PropTypes.func,
+//   user: PropTypes.object
+// };
 
 SignupForm.defaultProps = { signup: null, user: {} };

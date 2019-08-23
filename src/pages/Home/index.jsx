@@ -6,6 +6,7 @@ import Footer from '../../components/Footer';
 import TopOrderContainer from '../../components/TopOrderContainer';
 import HowToOrderContainer from '../../components/HowToOrderContainer';
 import HomePageReview from '../../components/HomePageReview';
+import AuthFormContainer from '../../components/AuthFormContainer';
 import Button from '../../components/Button';
 import Modal from '../../components/Modal';
 import './home.scss';
@@ -36,7 +37,7 @@ class Home extends React.Component {
         </Navbar>
         {isOpen && (
           <Modal
-            content={<div>Modal Content</div>}
+            content={<AuthFormContainer />}
             onCloseModal={this.onToggle}
           />
         )}

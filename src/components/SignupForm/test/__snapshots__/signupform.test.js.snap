@@ -1,65 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App should match snapshot 1`] = `
-<Form
-  as="form"
+<form
   onSubmit={[Function]}
 >
-  <FormGroup
-    widths="equal"
+  <div
+    className="form-input"
   >
-    <FormInput
-      as={[Function]}
-      control={[Function]}
-      fluid={true}
+    <Input
+      className="name-input"
+      handleChange={[Function]}
       name="firstname"
-      onChange={[Function]}
       placeholder="First name"
+      type="text"
       value=""
     />
-    <FormInput
-      as={[Function]}
-      control={[Function]}
-      fluid={true}
+    <Input
+      className="name-input"
+      handleChange={[Function]}
       name="lastname"
-      onChange={[Function]}
       placeholder="Last name"
+      type="text"
       value=""
     />
-  </FormGroup>
-  <FormField>
-    <input
-      id="email"
-      name="email"
-      onChange={[Function]}
-      placeholder="Email"
-      value=""
-    />
-  </FormField>
-  <FormField>
-    <input
-      name="phone"
-      onChange={[Function]}
-      placeholder="Phone"
-    />
-  </FormField>
-  <FormField>
-    <FormInput
-      as={[Function]}
-      control={[Function]}
-      fluid={true}
+  </div>
+  <Input
+    className="email-input"
+    handleChange={[Function]}
+    name="email"
+    placeholder="email"
+    type="text"
+    value=""
+  />
+  <Input
+    className="email-input"
+    handleChange={[Function]}
+    name="phone"
+    placeholder="phone"
+    type="phone"
+    value=""
+  />
+  <div
+    className="form-input password-input"
+  >
+    <Input
+      className="name-input"
+      handleChange={[Function]}
       name="password"
-      onChange={[Function]}
-      placeholder="Password"
+      placeholder="password"
       type="password"
+      value=""
     />
-  </FormField>
+    <Input
+      className="name-input"
+      handleChange={[Function]}
+      name="password2"
+      placeholder="repeat password"
+      type="password"
+      value=""
+    />
+  </div>
   <Button
-    as="button"
+    className=""
+    classes=""
+    name="Submit"
     onClick={[Function]}
     type="submit"
-  >
-    Submit
-  </Button>
-</Form>
+  />
+</form>
 `;

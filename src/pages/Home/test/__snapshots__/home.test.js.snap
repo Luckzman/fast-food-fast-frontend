@@ -31,6 +31,7 @@ exports[`App should match snapshot 1`] = `
     >
       <Button
         className="button"
+        classes=""
         handleClick={[Function]}
         name="LOGIN"
       />
@@ -39,5 +40,7 @@ exports[`App should match snapshot 1`] = `
   <Banner />
   <TopOrderContainer />
   <HowToOrderContainer />
+  <HomePageReview />
+  <Footer />
 </div>
 `;
