@@ -19,6 +19,11 @@ class Home extends React.Component {
   onToggle = () => {
     const { isOpen } = this.state;
     this.setState({ isOpen: !isOpen });
+    if (!isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
   }
 
   render() {

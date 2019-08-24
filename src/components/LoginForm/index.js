@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { Button, Form } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { userLogin } from '../../actions/authActions/authActions';
 import Loading from '../Loader/Loading';
+import Input from '../Input';
+import Button from '../Button';
 import { loginValidator } from '../../helpers/validate';
 import InlineError from '../../helpers/inlineErrors';
+
+import '../SignupForm/SignupForm.scss';
 
 class LoginForm extends Component {
   constructor(props) {
@@ -40,36 +43,32 @@ class LoginForm extends Component {
 
   render() {
     const { user, errors } = this.state;
-    if (this.props.user.isAuthenticated) {
-      return <Redirect to="catalog" />;
-    }
+    // if (this.props.user.isAuthenticated) {
+    //   return <Redirect to="catalog" />;
+    // }
     return (
-      <Form onSubmit={this.handleSubmit}>
-        <Form.Field>
-          <input
-            id="email"
-            name="email"
-            value={user.email}
-            placeholder="Email"
-            onChange={this.handleChange}
-          />
-          {errors.email && <InlineError text={errors.email} />}
-        </Form.Field>
-        <Form.Field>
-          <input
-            name="password"
-            value={this.password}
-            type="password"
-            placeholder="Password"
-            onChange={this.handleChange}
-          />
-          {errors.password && <InlineError text={errors.password} />}
-        </Form.Field>
+      <form className="signup-form" onSubmit={this.handleSubmit}>
+        <Input
+          name="email"
+          value={user.email}
+          handleChange={this.handleChange}
+          placeholder="Email"
+          className="email-input"
+        />
+        {/* {errors.email && <InlineError text={errors.email} />} */}
+
+        <Input
+          name="password"
+          value={this.password}
+          type="password"
+          className="email-input"
+          placeholder="Password"
+          onChange={this.handleChange}
+        />
+        {errors.password && <InlineError text={errors.password} />}
         {this.props.user.authIsLoading ? <Loading size="tiny" /> : null}
-        <Button type="submit" onClick={this.handleSubmit}>
-          Submit
-        </Button>
-      </Form>
+        <Button type="submit" name="Login" className="signup-btn" onClick={this.handleSubmit} />
+      </form>
     );
   }
 }

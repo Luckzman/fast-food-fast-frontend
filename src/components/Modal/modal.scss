@@ -9,11 +9,15 @@
   z-index: 2;
 }
 
+// body{
+//     overflow: hidden;
+// }
+
 .modal {
   position: absolute;
-  top:50%;
+  top:0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 150px);
   padding: 20px;
   background: #fff;
   border: 1px solid #666;
